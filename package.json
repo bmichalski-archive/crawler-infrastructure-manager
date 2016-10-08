@@ -1,0 +1,14 @@
+{
+  "name": "@bmichalski/crawler-infrastructure-manager",
+  "description": "Crawler infrastructure manager",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmichalski-js/crawler-infrastructure-manager.git"
+  },
+  "version": "0.0.1",
+  "dependencies": {
+    "@bmichalski/scaleway-infrastructure-manager": "0.0.1",
+    "commander": "^2.9.0"
+  }
+}
