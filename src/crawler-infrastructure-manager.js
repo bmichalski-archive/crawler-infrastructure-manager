@@ -3,6 +3,7 @@
 'use strict'
 
 const program = require('commander')
+const _ = require('lodash')
 
 program.version('0.0.1')
 
@@ -41,5 +42,32 @@ program
     require('./crawlers/terminate')
   })
 
+program
+  .command('scaleway:images:list')
+  .description('List available Scaleway images')
+  .option('-n, --name <name>', 'Name contains')
+  .option('-a, --architecture <architecture>', 'Architecture contains')
+  .option('-k, --kernel <kernel>', 'Default bootscript kernel contains')
+  .action((options) => {
+    const filters = {}
+
+    if (undefined !== options.name && _.isString(options.name)) {
+      filters.name = options.name
+    }
+
+    if (undefined !== options.architecture) {
+      filters.architecture = options.architecture
+    }
+
+    if (undefined !== options.kernel) {
+      filters.kernel = options.kernel
+    }
+
+    require('./scaleway/images/list')(filters)
+  })
+
 program.parse(process.argv)
 
+if (!process.argv.slice(2).length) {
+  program.outputHelp();
+}

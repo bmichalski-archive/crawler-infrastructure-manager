@@ -184,6 +184,16 @@
         }
       }
     },
+    "cli-table": {
+      "version": "0.3.1",
+      "from": "cli-table@latest",
+      "resolved": "https://registry.npmjs.org/cli-table/-/cli-table-0.3.1.tgz"
+    },
+    "colors": {
+      "version": "1.0.3",
+      "from": "colors@1.0.3",
+      "resolved": "https://registry.npmjs.org/colors/-/colors-1.0.3.tgz"
+    },
     "commander": {
       "version": "2.9.0",
       "from": "commander@latest",
@@ -193,6 +203,11 @@
       "version": "1.0.1",
       "from": "graceful-readlink@>=1.0.0",
       "resolved": "https://registry.npmjs.org/graceful-readlink/-/graceful-readlink-1.0.1.tgz"
+    },
+    "lodash": {
+      "version": "4.16.4",
+      "from": "lodash@>=4.16.4 <5.0.0",
+      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.16.4.tgz"
     }
   }
 }
