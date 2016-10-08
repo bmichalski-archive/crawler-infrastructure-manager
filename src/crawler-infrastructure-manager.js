@@ -44,9 +44,18 @@ program
 
 program
   .command('crawlers:wait-until <until>')
-  .description('Wait until all servers are running')
+  .description('Wait until all servers state is equal to <until>')
   .action((until) => {
     require('./crawlers/wait-until')(until)
+  })
+
+program
+  .command('crawlers:do <doScript>')
+  .description('Execute <doScript> to do something with each crawler')
+  .action((doScript) => {
+    require('./crawlers/do')(
+      require(process.cwd() + '/' + doScript)
+    )
   })
 
 program

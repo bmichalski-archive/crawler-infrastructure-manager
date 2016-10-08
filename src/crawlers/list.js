@@ -21,7 +21,7 @@ manager
         rawData = rawData.concat([
           server.info.state,
           server.info.id,
-          server.info.public_ip,
+          undefined === server.info.public_ip ? undefined : server.info.public_ip.address,
           server.info.commercial_type,
           server.info.arch
         ])
