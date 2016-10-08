@@ -12,5 +12,8 @@
     "cli-table2": "^0.2.0",
     "commander": "^2.9.0",
     "lodash": "^4.16.4"
+  },
+  "devDependencies": {
+    "bluebird": "^3.4.6"
   }
 }
