@@ -43,11 +43,18 @@ program
   })
 
 program
+  .command('crawlers:wait-until <until>')
+  .description('Wait until all servers are running')
+  .action((until) => {
+    require('./crawlers/wait-until')(until)
+  })
+
+program
   .command('scaleway:images:list')
   .description('List available Scaleway images')
-  .option('-n, --name <name>', 'Name contains')
-  .option('-a, --architecture <architecture>', 'Architecture contains')
-  .option('-k, --kernel <kernel>', 'Default bootscript kernel contains')
+  .option('-n, --name <name>', 'Name contains <name>')
+  .option('-a, --architecture <architecture>', 'Architecture contains <architecture>')
+  .option('-k, --kernel <kernel>', 'Default bootscript kernel contains <kernel>')
   .action((options) => {
     const filters = {}
 

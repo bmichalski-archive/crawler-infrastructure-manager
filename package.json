@@ -9,7 +9,7 @@
   "version": "0.0.1",
   "dependencies": {
     "@bmichalski/scaleway-infrastructure-manager": "0.0.1",
-    "cli-table": "^0.3.1",
+    "cli-table2": "^0.2.0",
     "commander": "^2.9.0",
     "lodash": "^4.16.4"
   }
