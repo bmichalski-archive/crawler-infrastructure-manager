@@ -2,7 +2,7 @@
 
 const conf = require('./../../../conf')
 const manager = require('@bmichalski/scaleway-infrastructure-manager')(conf)
-const Table = require('cli-table')
+const Table = require('cli-table2')
 
 module.exports = (filters) => {
   const name = undefined === filters.name ? undefined : filters.name.toLocaleLowerCase()

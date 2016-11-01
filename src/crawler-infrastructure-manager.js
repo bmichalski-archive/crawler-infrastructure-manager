@@ -24,8 +24,9 @@ program
 program
   .command('crawlers:list')
   .description('List crawlers')
-  .action(() => {
-    require('./crawlers/list')
+  .option('--json', 'Output JSON')
+  .action((options) => {
+    require('./crawlers/list')(options)
   })
 
 program
